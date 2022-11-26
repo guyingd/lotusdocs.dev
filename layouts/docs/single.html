@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+    {{ .Content }}
+
+    {{ if and .GitInfo .Site.Params.docs.ghrepo -}}
+        {{ partial "docs/gitinfo" . }}
+    {{ end -}}
+
+{{ end }}
